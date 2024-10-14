@@ -1,0 +1,838 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+  color: #000;
+  line-height: 1;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/* 共通スタイル
+------------------------------------------ */
+.container {
+  width: 91.79vw;
+  margin: 0 auto;
+}
+
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.95rem;
+  align-items: center;
+  background-color: #F0F4FF;
+  padding-top: 2.2rem;
+  padding-bottom: 3.4rem;
+  margin: 5rem auto;
+}
+
+.contact__text {
+  color: #111;
+  text-align: center;
+}
+
+.contact__text--product {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.44;
+  letter-spacing: .18rem;
+  margin-bottom: .4rem;
+}
+
+.contact__text--price {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: .15rem;
+}
+
+.contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 5.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 10rem;
+}
+
+.contact__button--onlineshop {
+  background-color: #46C4DB;
+}
+
+.contact__button--purchase {
+  background-color: #5DD5AB;
+}
+
+.contact__button.contact__button--onlineshop:hover {
+  background-color: #fff;
+  border: solid 2px #46C4DB;
+}
+
+.contact__button.contact__button--purchase:hover {
+  background-color: #fff;
+  border: solid 2px #5DD5AB;
+}
+
+.contact__button.contact__button--onlineshop:hover a {
+  color: #46C4DB;
+}
+
+.contact__button.contact__button--purchase:hover a {
+  color: #5DD5AB;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 3.1rem;
+}
+
+.section__title--english {
+  font-family: "EB Garamond", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: .15rem;
+  margin-left: .1rem;
+  margin-bottom: .35rem;
+}
+
+.section__title--japanese {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2;
+  letter-spacing: 0.08rem;
+  margin-left: .1rem;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 80vw;
+    max-width: 120rem;
+  }
+
+  .contact .container {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 3.1rem;
+    width: 100rem;
+    padding: 4rem 4.75rem 3.9rem;
+    margin: 4.8rem auto;
+  }
+
+  .contact.contact--2 .container {
+    padding-bottom: 4rem;
+  }
+
+  .contact__text {
+    text-align: start;
+    margin-right: 3.1rem;
+  }
+
+  .contact__text--product {
+    font-size: 2.4rem;
+    line-height: 1.55;
+    letter-spacing: 0.23rem;
+    margin-bottom: .65rem;
+  }
+
+  .contact__text--price {
+    font-size: 1.6rem;
+    line-height: 1.43;
+    letter-spacing: .18rem;
+  }
+
+  .contact__button--onlineshop {
+    margin-right: .1rem;
+  }
+
+  .section__title {
+    margin-bottom: 3.7rem;
+  }
+
+  .section__title--english {
+    font-size: 4.6rem;
+    line-height: 1.28;
+    letter-spacing: .18rem;
+    margin-bottom: .8rem;
+  }
+
+  .section__title--japanese {
+    font-size: 2rem;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1499px) {
+  .contact .container {
+    column-gap: 2.13vw;
+    width: 66.67vw;
+    padding: 2.67vw 3.2vw;
+  }
+
+  .contact.contact--2 .container {
+    padding-bottom: 3.2vw;
+  }
+
+
+  .contact__text {
+    margin-right: .63vw;
+  }
+
+  .contact__text--product {
+    font-size: 1.6vw;
+    margin-bottom: .53vw;
+  }
+
+  .contact__text--price {
+    font-size: 1.06vw;
+  }
+
+  .contact__button {
+    width: 20vw;
+    height: 3.86vw;
+  }
+
+  .contact__button a {
+    font-size: 1.2vw;
+  }
+
+}
+
+/* ヘッダー
+------------------------------------------ */
+.header__cover {
+  width: 100%;
+  aspect-ratio: 390 / 450;
+  background-image: url(../image/mainVisual_sp.jpg);
+  background-size: cover;
+  padding-top: 2.4rem;
+  margin-bottom: 15.7rem;
+  position: relative;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  width: 14.3rem;
+  margin: 0 auto;
+}
+
+.cover__text {
+  position: absolute;
+  bottom: -10.9rem;
+  left: calc(23 / 390 * 100%);
+  z-index: 1;
+}
+
+.cover__text--title {
+  font-family: "Marcellus", serif;
+  font-size: 4.1rem;
+  font-weight: 400;
+  line-height: 1.24;
+  letter-spacing: 1.23rem;
+  margin-bottom: .8rem;
+}
+
+.cover__text--title span {
+  display: block;
+}
+
+.cover__text--description {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .6rem;
+}
+
+
+@media (min-width: 768px) {
+  .header__cover {
+    aspect-ratio: 1500 / 720;
+    background-image: url(../image/mainVisual_pc.jpg);
+    background-size: cover;
+    padding-top: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .header__logo {
+    width: 16.6rem;
+  }
+
+  .cover__text {
+    transform: translateY(-50%);
+    top: 50%;
+    bottom: inherit;
+    left: calc(223 / 1500 * 100%);
+  }
+
+  .cover__text--title {
+    font-family: "Marcellus", serif;
+    font-size: 5.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 1.365rem;
+    margin-bottom: .7rem;
+  }
+
+  .cover__text--title span {
+    display: block;
+  }
+
+  .cover__text--description {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: .75rem;
+  }
+
+}
+
+/*コンセプト
+------------------------------------------ */
+.concept .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 390 / 680;
+  background-image: url(../image/concept_sp.jpg);
+  background-size: cover;
+  padding: 4.1rem 1.6rem 0;
+  margin: 0 auto;
+}
+
+.concept__text {
+  color: #fff;
+  text-align: center;
+}
+
+.concept__text--english {
+  font-family: "EB Garamond", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.conept__text--japanese {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 1.3rem;
+}
+
+.concept__text--description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.29;
+  text-align: start;
+}
+
+@media (min-width: 768px) {
+  .concept .container {
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100vw;
+    aspect-ratio: 1500 / 550;
+    background-image: url(../image/concept_pc.jpg);
+    background-size: cover;
+    padding: 0 16.13vw;
+    margin: 0;
+  }
+
+  .concept__text {
+    text-align: start;
+    margin-top: .2rem;
+  }
+
+  .concept__text--english {
+    font-size: 3.8rem;
+    line-height: 1.65;
+  }
+
+  .conept__text--japanese {
+    margin-bottom: 1.7rem;
+  }
+
+  .concept__text--description {
+    width: 42.9rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .concept .container {
+    padding: 5vw 16.13vw;
+  }
+
+}
+
+
+/*Voices
+------------------------------------------ */
+.voices .container {
+  display: flex;
+  flex-direction: column;
+  padding: 5.4rem 1.6rem 5rem;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.carousel {
+position: relative;
+}
+
+.carousel__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28rem;
+  height: 34.4rem;
+  background-color: #DBF7F9;
+  padding: 2.8rem 1.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.carousel__content--img {
+  width: 8rem;
+  margin-bottom: .8rem;
+}
+
+.carousel__content--name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.28;
+  margin-bottom: 2rem;
+}
+
+.carousel__content--text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2;
+  width: 100%;
+}
+
+.slick-track {
+  transform: inherit;
+  width: inherit;
+}
+
+.slick-arrow {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background-color: #00AFBF;
+  color: #fff;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 46.5%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: -1.6rem;
+}
+
+.slick-next {
+  right: -1.6rem;
+}
+
+.slick-dots {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  column-gap: .8rem;
+  width: .9rem;
+  height: .9rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.slick-dots button {
+  width: .9rem;
+  height: .9rem;
+  border-radius: 50%;
+  background-color: #EEE;
+  opacity: 1;
+}
+
+.slick-dots .slick-active button {
+  width: .9rem;
+  height: .9rem;
+  border-radius: 50%;
+  background-color: #00AFBF;
+}
+
+@media (min-width: 768px) {
+  .voices .container {
+    padding: 8rem 17.2rem 8rem;
+  }
+
+  .carousel__content {
+    width: 30rem;
+    height: 38.8rem;
+    padding: 4rem 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .carousel__content--img {
+    width: 10rem;
+  }
+
+  .carousel__content--name {
+    font-size: 1.5rem;
+    line-height: 2.13;
+    margin-bottom: 1.6rem;
+  }
+
+  .carousel__content--text {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    width: 26.8rem;
+  }
+
+  .slick-arrow {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 4rem;
+    top: 46%;
+  }
+
+  .slick-prev {
+    left: -15rem;
+  }
+
+  .slick-next {
+    right: -15rem;
+  }
+
+
+}
+
+
+/*Q&A
+------------------------------------------ */
+.qa .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 3.6rem 1.6rem 3.2rem;
+  background-image: linear-gradient(90deg, rgba(244, 255, 232, 1), rgba(198, 240, 254, 1));
+  margin: 0;
+}
+
+.qa .container .section__title {
+  margin-bottom: 3.2rem;
+}
+
+.qa .container .section__title .section__title--english {
+  margin-left: .25rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  row-gap: 2rem;
+
+}
+
+.accordion__item {
+  width: 100%;
+  background-color: #FFF;
+  padding: 1.8rem 1.6rem 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.86;
+}
+
+.accordion__item--question {
+  display: flex;
+  width: 100%;
+}
+
+.accordion__item--question p {
+  width: 100%;
+}
+
+.accordion__item--answer {
+  display: flex;
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.accordion__item--answer p {
+  width: 100%;
+}
+
+.accordion__item--question span,
+.accordion__item--answer span {
+  font-family: "EB Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-right: 1.25rem;
+}
+
+.accordion__item--button {
+  font-size: 1.6rem;
+  width: 1.6rem;
+  height: 2.6rem;
+  margin-top: .3rem;
+}
+
+.accordion__item--button-active {
+  transform: rotate(180deg);
+}
+
+.accordion__item.accordion__item--2,
+.accordion__item.accordion__item--3 {
+  line-height: 1.87;
+  padding-top: 1.7rem;
+}
+
+.accordion__item.accordion__item--2 .accordion__item--question span,
+.accordion__item.accordion__item--3 .accordion__item--question span {
+  line-height: 1.7;
+}
+
+.accordion__item.accordion__item--5 {
+  padding-bottom: 1.5rem;
+}
+
+
+
+@media (min-width: 768px) {
+  .qa .container {
+    max-width: 100vw;
+    padding: 4rem 30rem;
+  }
+
+  .qa .container .section__title {
+    margin-bottom: 3.7rem;
+  }
+
+  .qa .container .section__title .section__title--english {
+    margin-bottom: .7rem;
+  }
+
+
+  .accordion {
+    width: 60rem;
+    row-gap: 2.4rem;
+  }
+
+  .accordion__item {
+    padding: 2.4rem 2.4rem 1.9rem;
+  }
+
+  .accordion__item--question {
+    width: 55.4rem;
+  }
+
+  .accordion__item--answer {
+    width: 55rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .accordion__item--question span,
+  .accordion__item--answer span {
+    font-size: 1.8rem;
+    line-height: 1.37;
+    margin-right: 1.6rem;
+  }
+
+  .accordion__item--answer span {
+    margin-top: .2rem;
+  }
+
+  .accordion__item--button {
+    font-size: 2rem;
+    width: 1.8rem;
+    height: 2rem;
+    margin-top: -.3rem;
+  }
+
+  .accordion__item--button-active {
+    margin-top: .3rem;
+    height: 2.8rem;
+  }
+
+  .accordion__item.accordion__item--2,
+  .accordion__item.accordion__item--3 {
+    line-height: 1.87;
+    padding-top: 2.3rem;
+    padding-bottom: 2rem;
+  }
+
+  .accordion__item.accordion__item--2 .accordion__item--question span,
+  .accordion__item.accordion__item--3 .accordion__item--question span {
+    line-height: 1.4;
+  }
+
+  .accordion__item.accordion__item--4,
+  .accordion__item.accordion__item--5 {
+    padding-bottom: 1.9rem;
+  }
+
+}
+
+
+/*フッター
+------------------------------------------ */
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: #0071CE;
+  color: #fff;
+  padding: 2.4rem 1.6rem 2.3rem;
+  position: relative;
+}
+
+.footer__img {
+  width: 16.6rem;
+  margin-bottom: 2.6rem;
+}
+
+.footer__list {
+  display: flex;
+  column-gap: 3rem;
+  margin-bottom: 2.4rem;
+}
+
+.footer__list a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.41;
+}
+
+.footer__copyright {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.01rem;
+  margin-right: .2rem;
+}
+
+.footer__button--scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #0071CE;
+  font-size: 3rem;
+  position: absolute;
+  transform: translateY(-100%);
+  top: 0;
+  right: 4.1vw;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100vw;
+    padding: 3.2rem 12.13vw;
+  }
+
+  .footer__img {
+    width: 12.73vw;
+    margin-bottom: 0;
+  }
+
+  .footer__list {
+    column-gap: 2.07vw;
+    margin-bottom: 0;
+  }
+
+  .footer__list a {
+    font-size: 1.4rem;
+    line-height: 1.42;
+  }
+
+  .footer__copyright {
+    font-size: 1.2rem;
+    line-height: 1.41;
+    margin-top: .6rem;
+    margin-right: 0;
+  }
+
+  .footer__button--scroll {
+    right: 10vw;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 936px) {
+  .footer .container {
+    padding: 3.2rem 4.1vw;
+  }
+
+}
+
+@media (min-width: 1500px) {
+  .footer .container {
+    justify-content: center;
+    padding: 3.2rem 18.2rem;
+  }
+
+  .footer__img {
+    width: 19.1rem;
+    margin-right: 20.5rem;
+  }
+
+  .footer__list {
+    column-gap: 3.2rem;
+    margin-right: 15.5rem;
+  }
+
+  .footer__list a {
+    font-size: 1.4rem;
+    line-height: 1.42;
+  }
+
+  .footer__copyright {
+    font-size: 1.2rem;
+    line-height: 1.41;
+    margin-top: .6rem;
+    margin-right: 0;
+  }
+
+}
