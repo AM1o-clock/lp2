@@ -88,21 +88,15 @@ li {
 }
 
 .contact__button.contact__button--onlineshop:hover {
+  color: #46C4DB;
   background-color: #fff;
   border: solid 2px #46C4DB;
 }
 
 .contact__button.contact__button--purchase:hover {
+  color: #5DD5AB;
   background-color: #fff;
   border: solid 2px #5DD5AB;
-}
-
-.contact__button.contact__button--onlineshop:hover a {
-  color: #46C4DB;
-}
-
-.contact__button.contact__button--purchase:hover a {
-  color: #5DD5AB;
 }
 
 .section__title {
@@ -215,12 +209,9 @@ li {
   }
 
   .contact__button {
+    font-size: 1.2vw;
     width: 20vw;
     height: 3.86vw;
-  }
-
-  .contact__button a {
-    font-size: 1.2vw;
   }
 
 }
@@ -419,26 +410,29 @@ position: relative;
   height: 34.4rem;
   background-color: #DBF7F9;
   padding: 2.8rem 1.5rem;
+  margin-left: 2.3rem;
+  margin-right: 2.3rem;
   margin-bottom: 1.6rem;
 }
 
 .carousel__content--img {
   width: 8rem;
-  margin-bottom: .8rem;
+  margin-left: 1rem;
+  margin-bottom: .3rem;
 }
 
 .carousel__content--name {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.28;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .carousel__content--text {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2;
-  width: 100%;
+  width: 25rem;
 }
 
 .slick-track {
@@ -452,7 +446,7 @@ position: relative;
   border-radius: 50%;
   background-color: #00AFBF;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 3rem;
   position: absolute;
   top: 46.5%;
   transform: translateY(-50%);
@@ -483,6 +477,7 @@ position: relative;
   border-radius: 50%;
   background-color: #EEE;
   opacity: 1;
+  font-size: 0;
 }
 
 .slick-dots .slick-active button {
@@ -494,24 +489,28 @@ position: relative;
 
 @media (min-width: 768px) {
   .voices .container {
-    padding: 8rem 17.2rem 8rem;
+    width: 102rem;
+    padding: 8rem 0 8.5rem;
   }
 
   .carousel__content {
-    width: 30rem;
     height: 38.8rem;
-    padding: 4rem 1.6rem;
-    margin-bottom: 2.4rem;
+    padding: 4rem 1.5rem 2.8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1.9rem;
   }
 
   .carousel__content--img {
     width: 10rem;
+    margin-left: 0;
+    margin-bottom: .4rem;
   }
 
   .carousel__content--name {
     font-size: 1.5rem;
     line-height: 2.13;
-    margin-bottom: 1.6rem;
+    margin-bottom: .7rem;
   }
 
   .carousel__content--text {
@@ -523,20 +522,62 @@ position: relative;
   .slick-arrow {
     width: 4.8rem;
     height: 4.8rem;
-    font-size: 4rem;
+    font-size: 4.4rem;
+  }
+
+  .slick-prev {
+    left: -6.8rem;
+  }
+
+  .slick-next {
+    right: -6.8rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .voices .container {
+    width: 68vw;
+  }
+
+  .carousel__content {
+    height: 28.86vw;
+    padding: 4vw 1.6vw;
+    margin-left: 1.33vw;
+    margin-right: 1.33vw;
+    margin-bottom: 2.4vw;
+  }
+
+  .carousel__content--img {
+    width: 6.66vw;
+  }
+
+  .carousel__content--name {
+    font-size: 1vw;
+  }
+
+  .carousel__content--text {
+    font-size: 1.06vw;
+    width: 17.86vw;
+  }
+
+  .slick-arrow {
+    width: 3.2vw;
+    height: 3.2vw;
+    font-size: 2.93vw;
     top: 46%;
   }
 
   .slick-prev {
-    left: -15rem;
+    left: -4.53vw;
   }
 
   .slick-next {
-    right: -15rem;
+    right: -4.53vw;
   }
 
-
 }
+
 
 
 /*Q&A

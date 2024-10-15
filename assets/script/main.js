@@ -1,10 +1,10 @@
 
 // Slick
 $('.carousel').slick({
-  autoplay: false, // 自動再生
-  autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
-  dots: true, // ドットを表示
-  fade: false, // フェードで切り替え
+  autoplay: true,
+  autoplaySpeed: 4000,
+  dots: true,
+  fade: false,
   prevArrow: '<button type=”button” class=slick-prev><i class="bi bi-arrow-left-short"></i></button>',
   nextArrow: '<button type=”button” class=slick-next><i class="bi bi-arrow-right-short"></i></button>',
   slidesToShow: 3,
